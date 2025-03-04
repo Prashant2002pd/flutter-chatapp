@@ -21,5 +21,5 @@ A real-time chat application built with Flutter, Firebase, and Firebase Cloud Me
 1. **Clone the repository:**
 
    ```sh
-   git clone https://github.com/yourusername/flutter-chat-app.git
-   cd flutter-chat-app
+   https://github.com/Prashant2002pd/flutter-chatapp.git
+   cd flutter-chatapp
