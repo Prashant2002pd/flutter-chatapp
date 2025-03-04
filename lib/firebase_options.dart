@@ -3,6 +3,7 @@
 import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 /// Default [FirebaseOptions] for use with your Firebase apps.
 ///
@@ -40,8 +41,8 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAX5z3S0z8qPMqg-dXP5Cak085AWF4MHEs',
+  static FirebaseOptions web = FirebaseOptions(
+    apiKey: dotenv.env['WEB'] ?? '',
     appId: '1:54963688270:web:55126e12272b2b4979041f',
     messagingSenderId: '54963688270',
     projectId: 'testproject-805e7',
@@ -49,16 +50,16 @@ class DefaultFirebaseOptions {
     storageBucket: 'testproject-805e7.firebasestorage.app',
   );
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAMXoQS-k5H5Rmfw27bCQEQYJkP9ibCUYc',
+  static FirebaseOptions android = FirebaseOptions(
+    apiKey: dotenv.env['ANDROID'] ?? '',
     appId: '1:54963688270:android:1ed4f466fec83ca579041f',
     messagingSenderId: '54963688270',
     projectId: 'testproject-805e7',
     storageBucket: 'testproject-805e7.firebasestorage.app',
   );
 
-  static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyABHZ8Drp_EOH7_4JOZL2fDs3YZqrayCU4',
+  static FirebaseOptions ios = FirebaseOptions(
+    apiKey: dotenv.env['IOS'] ?? '',
     appId: '1:54963688270:ios:d2ea732813e3ecb079041f',
     messagingSenderId: '54963688270',
     projectId: 'testproject-805e7',
@@ -66,8 +67,8 @@ class DefaultFirebaseOptions {
     iosBundleId: 'com.example.test3',
   );
 
-  static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyABHZ8Drp_EOH7_4JOZL2fDs3YZqrayCU4',
+  static FirebaseOptions macos = FirebaseOptions(
+    apiKey: dotenv.env['MAC'] ?? '',
     appId: '1:54963688270:ios:d2ea732813e3ecb079041f',
     messagingSenderId: '54963688270',
     projectId: 'testproject-805e7',
